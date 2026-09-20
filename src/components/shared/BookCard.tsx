@@ -21,6 +21,7 @@ const BookCard = ({book}: IBookCardProps) => {
                 <span>{book.category}</span>
                 <span className='flex gap-1 items-center'>{book.rating} <FaStar /></span>
             </div>
+            <button className='btn btn-active'>View Details</button>
         </div>
     );
 };

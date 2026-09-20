@@ -14,10 +14,10 @@ const Books = async() => {
     
     return (
         <div className='container mx-auto'>
-            Books
-            <div className="grid grid-cols-4 gap-3">
+            <h2 className="text-center font-bold text-4xl my-10">Explore Favorite Books</h2>
+            <div className="grid grid-cols-4 gap-3 mb-10">
                 {
-                    booksData.map((book: IBook)=> {
+                    booksData.slice(0,8).map((book: IBook)=> {
                         return <BookCard key={book.bookId} book={book}/>
                     })
                 }
