@@ -3,7 +3,7 @@ import bannerImg from "@/assets/hero_img.jpg";
 
 const Banner = () => {
   return (
-    <section className="py-5 mx-30">
+    <section className="py-5 mx-30 cotainer">
         <div className="bg-gray-300 rounded-2xl p-4">
 
       <div className="flex items-center justify-center gap-4">
