@@ -1,6 +1,6 @@
 import { IBook } from '@/app/types/books.types';
 import Image from 'next/image';
-import React from 'react';
+import Link from 'next/link';
 import { FaStar } from 'react-icons/fa';
 
 interface IBookCardProps {
@@ -21,7 +21,7 @@ const BookCard = ({book}: IBookCardProps) => {
                 <span>{book.category}</span>
                 <span className='flex gap-1 items-center'>{book.rating} <FaStar /></span>
             </div>
-            <button className='btn btn-active'>View Details</button>
+            <Link href={`/books/${book.bookId}`}><button className='btn btn-active'>View Details</button></Link>
         </div>
     );
 };

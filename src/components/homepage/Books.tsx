@@ -10,12 +10,11 @@ const getBooks = async()=>{
 
 const Books = async() => {
     const booksData = await getBooks();
-    console.log(booksData)
     
     return (
         <div className='container mx-auto'>
             <h2 className="text-center font-bold text-4xl my-10">Explore Favorite Books</h2>
-            <div className="grid grid-cols-4 gap-3 mb-10">
+            <div className="grid grid-cols-4 gap-3">
                 {
                     booksData.slice(0,8).map((book: IBook)=> {
                         return <BookCard key={book.bookId} book={book}/>

@@ -28,8 +28,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         
         
         <Navbar />
+
         <div>{children}</div>
-        <div className="container mx-auto h-20 bg-amber-300 text-5xl font-bold text-center pt-5">Footer</div>
+
+        <div className="container mx-auto h-20 bg-amber-300 text-5xl font-bold text-center pt-5 mt-10">Footer</div>
       </body>
     </html>
   );
