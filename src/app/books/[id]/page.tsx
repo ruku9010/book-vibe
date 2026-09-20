@@ -1,6 +1,6 @@
 import { IBook } from "@/app/types/books.types";
+import ReadButton from "@/components/bookDetails/ReadButton";
 import Image from "next/image";
-import Link from "next/link";
 
 interface IBookDetailsProps {
   params: Promise<{
@@ -34,12 +34,12 @@ const BookDetailsPage = async ({ params }: IBookDetailsProps) => {
         <h2 className="card-title">{book.bookName}</h2>
         <p>{book.review}</p>
         <div className="card-actions justify-end">
-          <Link href={"/src/app/listed-books/page.tsx"}>
-            <button className="btn btn-primary">Read</button>{" "}
-          </Link>
-          <Link href={"/src/app/listed-books/page.tsx"}>
+          
+            <ReadButton book={book} />
+          
+          
             <button className="btn btn-primary">Wishlist</button>{" "}
-          </Link>
+          
         </div>
       </div>
     </div>

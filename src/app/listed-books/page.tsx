@@ -1,6 +1,12 @@
-import React from 'react';
+'use client'
+import  { BooksContext } from '@/context/BooksProvider';
+import { useContext } from 'react';
 
-const listedBooks = () => {
+const ListedBooks = () => {
+
+    const {readBooks} = useContext(BooksContext)
+    console.log(readBooks);
+    
     return (
         <div>
             Listed books
@@ -8,4 +14,4 @@ const listedBooks = () => {
     );
 };
 
-export default listedBooks;
+export default ListedBooks;

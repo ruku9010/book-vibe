@@ -6,9 +6,10 @@ const Navbar = () => {
   const links = (
     <>
       <Link href={"/books"}>
-        <li>
-          Books
-        </li>
+        <li>Books</li>
+      </Link>
+      <Link href={"/listed-books"}>
+        <li>Books List</li>
       </Link>
     </>
   );
@@ -42,7 +43,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-2 items-center">
-          <Link href={"/"} className="btn btn-ghost text-xl">Book Vibe</Link>
+          <Link href={"/"} className="btn btn-ghost text-xl">
+            Book Vibe
+          </Link>
           <Image src={logo} alt="logo" />
         </div>
       </div>
