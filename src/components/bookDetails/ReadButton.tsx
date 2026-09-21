@@ -1,31 +1,40 @@
-"use client"
+"use client";
 
-import { IBook } from '@/app/types/books.types';
-import { BooksContext } from '@/context/BooksProvider';
-import { useContext } from 'react';
+import { IBook } from "@/app/types/books.types";
+import { BooksContext } from "@/context/BooksProvider";
+import { useContext } from "react";
+import { toast } from "react-toastify";
 
 // interface ReadButtonProps {
 
 // }
 
-const ReadButton = ({book}: {book: IBook}) => {
+const ReadButton = ({ book }: { book: IBook }) => {
+  const { readBooks, setReadBooks } = useContext(BooksContext);
 
-    const {readBooks, setReadBooks} = useContext(BooksContext)
+  // console.log(BooksContext);
 
-    // console.log(BooksContext);
+  const handleReadBook = () => {
+  const alreadyRead = readBooks.some(
+    (item: IBook) => item.bookId === book.bookId
+  );
 
-    const handleReadBook = () => {
-        console.log("Read button triggared", book);
-        setReadBooks([...readBooks, book]);
-        alert(`You have add ${book.bookName} to Read list` )
-    };
-    
+  if (alreadyRead) {
+    toast.error(`You already added this book`);
+    return;
+  }
 
-    return (
-        <div>
-            <button onClick={() => handleReadBook()} className="btn btn-primary">Read</button>
-        </div>
-    );
+  setReadBooks([...readBooks, book]);
+  toast.success(`You have added ${book.bookName} to Read list`);
+};
+
+  return (
+    <div>
+      <button onClick={() => handleReadBook()} className="btn btn-primary">
+        Add to Read
+      </button>
+    </div>
+  );
 };
 
 export default ReadButton;

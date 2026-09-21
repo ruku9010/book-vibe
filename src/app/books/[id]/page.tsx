@@ -1,5 +1,6 @@
 import { IBook } from "@/app/types/books.types";
 import ReadButton from "@/components/bookDetails/ReadButton";
+import WishlistButton from "@/components/bookDetails/WishlistButton";
 import Image from "next/image";
 
 interface IBookDetailsProps {
@@ -38,7 +39,7 @@ const BookDetailsPage = async ({ params }: IBookDetailsProps) => {
             <ReadButton book={book} />
           
           
-            <button className="btn btn-primary">Wishlist</button>{" "}
+            <WishlistButton book={book} />
           
         </div>
       </div>

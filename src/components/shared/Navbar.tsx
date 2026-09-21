@@ -5,12 +5,12 @@ import Link from "next/link";
 const Navbar = () => {
   const links = (
     <>
-      <Link href={"/books"}>
-        <li>Books</li>
-      </Link>
-      <Link href={"/listed-books"}>
-        <li>Books List</li>
-      </Link>
+      <li>
+        <Link href={"/books"}>Books</Link>
+      </li>
+      <li>
+        <Link href={"/listed-books"}>Books List</Link>
+      </li>
     </>
   );
   return (
