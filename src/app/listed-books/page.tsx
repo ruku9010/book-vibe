@@ -38,7 +38,7 @@ const ListedBooks = () => {
       </h2>
 <div className="text-center my-5">
 
-<select value={sortBy} onChange={(e)=> setSortBy(e.target.value as "rating" | "pages" | "year")} defaultValue="Sort By" className="select select-success">
+<select value={sortBy} onChange={(e)=> setSortBy(e.target.value as "rating" | "pages" | "year")}  className="select select-success">
   <option disabled={true}>Sort By</option>
   <option value={"rating"}>Rating</option>
   <option value={"pages"}>Number of Pages</option>
