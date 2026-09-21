@@ -11,6 +11,9 @@ const Navbar = () => {
       <li>
         <Link href={"/listed-books"}>Books List</Link>
       </li>
+      <li>
+        <Link href={"/read-books"}>Read Books</Link>
+      </li>
     </>
   );
   return (
